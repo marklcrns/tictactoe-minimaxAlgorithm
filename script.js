@@ -1,6 +1,8 @@
 /* with easy AI generating random moves */
 
 var origBoard;
+var playerScore = (document.querySelector("#player").innerHTML = 0);
+var computerScore = (document.querySelector("#computer").innerHTML = 0);
 const huPlayer = "O";
 const aiPlayer = "X";
 const winCombos = [
@@ -31,6 +33,18 @@ function startGame() {
     // get the cell id everytime a cell is clicked
     cells[i].addEventListener("click", turnClick, false);
   }
+}
+
+function restartGame() {
+  for (var i = 0; i < cells.length; i++) {
+    cells[i].innerText = "";
+    // remove background color
+    cells[i].style.removeProperty("background-color");
+    // get the cell id everytime a cell is clicked
+    cells[i].addEventListener("click", turnClick, false);
+  }
+  document.querySelector("#player").innerHTML = 0;
+  document.querySelector("#computer").innerHTML = 0;
 }
 
 function turnClick(square) {
@@ -68,14 +82,28 @@ function checkWin(board, player) {
 
 function gameOver(gameWon) {
   // paint all winCombos squares with color
+  var winner = gameWon.player;
   for (let index of winCombos[gameWon.index]) {
     document.getElementById(index).style.backgroundColor =
-      gameWon.player == huPlayer ? "rgb(104, 222, 134)" : "rgb(222, 104, 120)";
+      winner == huPlayer ? "rgb(104, 222, 134)" : "rgb(222, 104, 120)";
   }
   for (var i = 0; i < cells.length; i++) {
     cells[i].removeEventListener("click", turnClick, false);
   }
-  declareWinner(gameWon.player == huPlayer ? "You win!" : "You lose.");
+  scoreUpdate(winner);
+
+  declareWinner(winner == huPlayer ? "You win!" : "You lose.");
+}
+
+// update scoreboard
+function scoreUpdate(winner) {
+  if (winner === huPlayer) {
+    playerScore += 1;
+    document.querySelector("#player").innerHTML = playerScore;
+  } else {
+    computerScore += 1;
+    document.querySelector("#computer").innerHTML = computerScore;
+  }
 }
 
 function declareWinner(who) {

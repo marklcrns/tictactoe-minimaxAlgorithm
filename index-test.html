@@ -10,12 +10,18 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="bootstrap.min.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style-test.css" />
   </head>
   <body>
-    <h1 class="display-1 text-center">Tic Tac Toe</h1>
+    <!-- header -->
+    <section class="container text-center">
+      <h1 class="display-1">Tic Tac Toe</h1>
+      <button class="btn btn-outline-warning btn-lg" onClick="startGame()">
+        CLEAR
+      </button>
+    </section>
     <!-- the grid -->
-    <section class="content mt-3">
+    <section class="content mt-5">
       <div class="container d-flex justify-content-center">
         <table>
           <tbody class="text-center">
@@ -41,33 +47,10 @@
       <div class="endgame">
         <div class="text"></div>
         <button class="btn btn-outline-light btn-lg" onClick="startGame()">
-          AGAIN?
+          RESTART
         </button>
       </div>
     </section>
-    <!-- scoreboard -->
-    <section class="container mt-3 text-center">
-      <div class="row scoreboard d-flex justify-content-between">
-        <div class="text col-lg-5 col-md-5 col-4">Player</div>
-        <div class="text col">
-          <button class="clear btn btn-danger" onClick="restartGame()">
-            RESTART
-          </button>
-        </div>
-        <div class="text col-lg-5 col-md-5 col-4">Robot</div>
-      </div>
-      <div class="row scoreboard">
-        <div class="text col-lg-5 col-md-5 col-4" id="player">0</div>
-        <div class="text col"></div>
-        <div class="text col-lg-5 col-md-5 col-4" id="computer">0</div>
-      </div>
-    </section>
-    <!-- delay computer's input for extra effects -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
     <script src="bootstrap.min.js"></script>
     <script src="script.js"></script>
   </body>

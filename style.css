@@ -1,30 +1,29 @@
-h1 {
-  font-size: 50px;
-  text-align: center;
+body {
+  background: url(imgs/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  font-family: "Cabin Sketch", cursive;
 }
 
-td {
-  border: 1px solid black;
+h1 .display-1 {
+  font-size: 3rem;
+}
+
+html {
+  height: 100%;
+}
+
+group-lg > .btn,
+.btn-lg {
+  font-size: 2rem;
+}
+
+.cell {
+  border: 3px solid black;
   height: 150px;
   width: 150px;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  font-size: 70px;
-  font-family: "Comic Sans MS", cursive, sans-serif;
-}
-
-td:hover {
-  border: 2px solid maroon;
-  background: transparent;
-}
-
-table {
-  border-collapse: collapse;
-  position: absolute;
-  left: 50%;
-  margin-left: -225px;
-  top: 200px;
+  font-size: 6rem;
+  transition: all 0.2s ease-out 0s;
 }
 
 table tr:first-child td {
@@ -43,20 +42,53 @@ table tr td:last-child {
   border-right: 0;
 }
 
+td:hover {
+  border: 4px solid rgba(0, 0, 0, 0.2);
+  background: transparent;
+}
+
 .endgame {
   display: none;
   width: 300px;
-  height: 90px;
+  height: 300px;
   top: 275px;
-  background-color: rgb(243, 217, 132, 0.9);
+  background-color: rgba(87, 87, 87, 0.6);
   position: absolute;
+  top: 26%;
   left: 50%;
-  margin-left: -146px;
-  padding-top: 100px;
+  margin-left: -150px;
+  padding-top: 70px;
   padding-bottom: 100px;
   text-align: center;
   vertical-align: middle;
   border-radius: 50px;
   color: white;
-  font-size: 3em;
+  font-size: 3rem;
+}
+
+.scoreboard {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: ;
+}
+
+@media (max-width: 464.98px) {
+  .endgame {
+    display: none;
+    width: 300px;
+    height: 300px;
+    top: 275px;
+    background-color: rgba(87, 87, 87, 0.6);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -146px;
+    padding-top: 70px;
+    padding-bottom: 100px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50px;
+    color: white;
+    font-size: 3rem;
+  }
 }
