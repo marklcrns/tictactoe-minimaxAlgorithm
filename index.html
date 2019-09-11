@@ -18,7 +18,38 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1 class="display-1 text-center">Tic Tac Toe</h1>
+    <h1 class="text-center">Tic Tac Toe</h1>
+    <!-- scoreboard -->
+    <section class="container">
+      <div class="row scoreboard justify-content-between">
+        <div class="playerScore text-center col-lg-5 col-md-5 col-4">
+          Player
+        </div>
+        <button
+          id="btnReset"
+          class="col-4 col-md-2 btn btn-outline-danger"
+          onClick="restartGame()"
+        >
+          RESTART
+        </button>
+        <div class="robotScore text-center col-lg-5 col-md-5 col-4">Robot</div>
+      </div>
+      <div class="row scoreboard">
+        <div
+          class="playerScore text-center col-lg-5 col-md-5 col-4"
+          id="player"
+        >
+          0
+        </div>
+        <div class="col"></div>
+        <div
+          class="robotScore text-center col-lg-5 col-md-5 col-4"
+          id="computer"
+        >
+          0
+        </div>
+      </div>
+    </section>
     <!-- the grid -->
     <section class="content mt-3">
       <div class="container d-flex justify-content-center">
@@ -42,33 +73,22 @@
           </tbody>
         </table>
       </div>
+      <div class="signature container mt-5">
+        <p class="text-center font-weight-lighter font-italic">
+          -M Lucernas.
+        </p>
+      </div>
       <!-- end game pop-up box -->
       <div class="endgame">
         <div class="text"></div>
-        <button class="btn btn-outline-light btn-lg" onClick="startGame()">
+        <button
+          id="btnRestart"
+          class="btn btn-outline-light btn-lg"
+          onClick="startGame()"
+        >
           AGAIN?
         </button>
       </div>
-    </section>
-    <!-- scoreboard -->
-    <section class="container mt-3 text-center">
-      <div class="row scoreboard d-flex justify-content-between">
-        <div class="text col-lg-5 col-md-5 col-4">Player</div>
-        <div class="text col">
-          <button class="clear btn btn-danger" onClick="restartGame()">
-            RESTART
-          </button>
-        </div>
-        <div class="text col-lg-5 col-md-5 col-4">Robot</div>
-      </div>
-      <div class="row scoreboard">
-        <div class="text col-lg-5 col-md-5 col-4" id="player">0</div>
-        <div class="text col"></div>
-        <div class="text col-lg-5 col-md-5 col-4" id="computer">0</div>
-      </div>
-      <p class="text-center font-weight-lighter font-italic">
-        -M Lucernas.
-      </p>
     </section>
     <script src="bootstrap.min.js"></script>
     <script src="script.js"></script>

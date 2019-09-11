@@ -5,25 +5,8 @@ body {
   font-family: "Cabin Sketch", cursive;
 }
 
-h1 .display-1 {
-  font-size: 3rem;
-}
-
 html {
   height: 100%;
-}
-
-group-lg > .btn,
-.btn-lg {
-  font-size: 2rem;
-}
-
-.cell {
-  border: 3px solid black;
-  height: 150px;
-  width: 150px;
-  font-size: 6rem;
-  transition: all 0.2s ease-out 0s;
 }
 
 table tr:first-child td {
@@ -49,15 +32,14 @@ td:hover {
 
 .endgame {
   display: none;
-  width: 300px;
-  height: 300px;
-  top: 275px;
+  width: 320px;
+  height: 320px;
   background-color: rgba(87, 87, 87, 0.6);
   position: absolute;
-  top: 26%;
+  top: 45%;
   left: 50%;
-  margin-left: -150px;
-  padding-top: 70px;
+  margin-left: -160px;
+  padding-top: 60px;
   padding-bottom: 100px;
   text-align: center;
   vertical-align: middle;
@@ -65,29 +47,278 @@ td:hover {
   color: white;
   font-size: 3rem;
 }
-
+h1 {
+  font-size: 6rem;
+}
+#btnReset {
+  font-size: 2rem;
+}
+#btnRestart {
+  font-size: 2rem;
+}
+.cell {
+  border: 3px solid black;
+  height: 180px;
+  width: 180px;
+  font-size: 7rem;
+  transition: all 0.2s ease-out 0s;
+}
 .scoreboard {
   font-size: 2.5rem;
   font-weight: 600;
 }
+.playerScore {
+  padding-left: 150px;
+}
+.robotScore {
+  padding-right: 150px;
+}
+.signature {
+  font-size: 1.5rem;
+}
 
-@media (max-width: 464.98px) {
+@media (min-width: 320px) and (max-width: 374.98px) {
   .endgame {
     display: none;
-    width: 300px;
-    height: 300px;
-    top: 275px;
+    width: 180px;
+    height: 180px;
     background-color: rgba(87, 87, 87, 0.6);
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
-    margin-left: -146px;
-    padding-top: 70px;
+    margin-left: -90.4px;
+    padding-top: 40px;
+    padding-bottom: 100px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50px;
+    color: white;
+    font-size: 2rem;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  #btnReset {
+    font-size: 1rem;
+  }
+  #btnRestart {
+    font-size: 1rem;
+  }
+  .cell {
+    border: 3px solid black;
+    height: 90px;
+    width: 90px;
+    font-size: 3.5rem;
+    transition: all 0.2s ease-out 0s;
+  }
+  .scoreboard {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .playerScore {
+    padding-left: 0;
+  }
+  .robotScore {
+    padding-right: 0;
+  }
+  .signature {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 424.98px) {
+  .endgame {
+    display: none;
+    width: 250px;
+    height: 250px;
+    background-color: rgba(87, 87, 87, 0.6);
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    margin-left: -125.6px;
+    padding-top: 50px;
     padding-bottom: 100px;
     text-align: center;
     vertical-align: middle;
     border-radius: 50px;
     color: white;
     font-size: 3rem;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  #btnReset {
+    font-size: 1.3rem;
+  }
+  #btnRestart {
+    font-size: 2rem;
+  }
+  .cell {
+    border: 3px solid black;
+    height: 110px;
+    width: 110px;
+    font-size: 3.5rem;
+    transition: all 0.2s ease-out 0s;
+  }
+  .scoreboard {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  .playerScore {
+    padding-left: 0;
+  }
+  .robotScore {
+    padding-right: 0;
+  }
+  .signature {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 767.98px) {
+  .endgame {
+    display: none;
+    width: 250px;
+    height: 250px;
+    background-color: rgba(87, 87, 87, 0.6);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -125.6px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50px;
+    color: white;
+    font-size: 3rem;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  #btnReset {
+    font-size: 1.5rem;
+  }
+  #btnRestart {
+    font-size: 2rem;
+  }
+  .cell {
+    border: 3px solid black;
+    height: 130px;
+    width: 130px;
+    font-size: 5rem;
+    transition: all 0.2s ease-out 0s;
+  }
+  .scoreboard {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .playerScore {
+    padding-left: 0;
+  }
+  .robotScore {
+    padding-right: 0;
+  }
+  .signature {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .endgame {
+    display: none;
+    width: 250px;
+    height: 250px;
+    background-color: rgba(87, 87, 87, 0.6);
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin-left: -125.6px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50px;
+    color: white;
+    font-size: 3rem;
+  }
+  h1 {
+    font-size: 6rem;
+  }
+  #btnReset {
+    font-size: 1.5rem;
+  }
+  #btnRestart {
+    font-size: 2rem;
+  }
+  .cell {
+    border: 3px solid black;
+    height: 130px;
+    width: 130px;
+    font-size: 5rem;
+    transition: all 0.2s ease-out 0s;
+  }
+  .scoreboard {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .playerScore {
+    padding-left: 0;
+  }
+  .robotScore {
+    padding-right: 0;
+  }
+  .signature {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439.98px) {
+  .endgame {
+    display: none;
+    width: 250px;
+    height: 250px;
+    background-color: rgba(87, 87, 87, 0.6);
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    margin-left: -125.6px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50px;
+    color: white;
+    font-size: 3rem;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  #btnReset {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  #btnRestart {
+    font-size: 2rem;
+  }
+  .cell {
+    border: 3px solid black;
+    height: 130px;
+    width: 130px;
+    font-size: 5rem;
+    transition: all 0.2s ease-out 0s;
+  }
+  .scoreboard {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  .playerScore {
+    padding-left: 150px;
+  }
+  .robotScore {
+    padding-right: 150px;
+  }
+  .signature {
+    font-size: 1.3rem;
   }
 }

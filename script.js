@@ -1,8 +1,8 @@
 /* with easy AI generating random moves */
 
 var origBoard;
-var playerScore = (document.querySelector("#player").innerHTML = 0);
-var computerScore = (document.querySelector("#computer").innerHTML = 0);
+var playerScore = 0;
+var computerScore = 0;
 const huPlayer = "O";
 const aiPlayer = "X";
 const winCombos = [
@@ -43,6 +43,8 @@ function restartGame() {
     // get the cell id everytime a cell is clicked
     cells[i].addEventListener("click", turnClick, false);
   }
+  playerScore = 0;
+  computerScore = 0;
   document.querySelector("#player").innerHTML = 0;
   document.querySelector("#computer").innerHTML = 0;
 }
@@ -53,7 +55,9 @@ function turnClick(square) {
     turn(square.target.id, huPlayer);
     // if not tie and huPlayer hasn't won, ai take a turn
     if (!checkTie(huPlayer) && !checkWin(origBoard, huPlayer))
-      turn(bestSpot(), aiPlayer);
+      setTimeout(() => {
+        turn(bestSpot(), aiPlayer);
+      }, 100);
   }
 }
 
@@ -85,7 +89,9 @@ function gameOver(gameWon) {
   var winner = gameWon.player;
   for (let index of winCombos[gameWon.index]) {
     document.getElementById(index).style.backgroundColor =
-      winner == huPlayer ? "rgb(104, 222, 134)" : "rgb(222, 104, 120)";
+      winner == huPlayer
+        ? "rgba(104, 222, 134, 0.3)"
+        : "rgba(222, 114, 120, 0.3)";
   }
   for (var i = 0; i < cells.length; i++) {
     cells[i].removeEventListener("click", turnClick, false);
@@ -124,7 +130,7 @@ function checkTie(player) {
   // if no empty squares and no winner
   if (emptySquares().length === 0 && !checkWin(origBoard, player)) {
     for (var i = 0; i < cells.length; i++) {
-      cells[i].style.backgroundColor = "rgb(57, 159, 227)";
+      cells[i].style.backgroundColor = "rgba(57, 159, 227, 0.3)";
       cells[i].removeEventListener("click", turnClick, false);
     }
     declareWinner("Tie Game!");
