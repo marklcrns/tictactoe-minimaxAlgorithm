@@ -1,2 +1,4 @@
 # tictactoe-minimaxAlgorithm
-Tictactoe with minimaxAlgorithm made from JS
+
+Tictactoe with minimax algorithm
+- added simple UI design
