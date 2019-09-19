@@ -1,5 +1,3 @@
-/* with easy AI generating random moves */
-
 var origBoard;
 var playerScore = 0;
 var computerScore = 0;
@@ -38,7 +36,6 @@ function startGame() {
 function restartGame() {
   for (var i = 0; i < cells.length; i++) {
     cells[i].innerText = "";
-    // remove background color
     cells[i].style.removeProperty("background-color");
     // get the cell id everytime a cell is clicked
     cells[i].addEventListener("click", turnClick, false);
